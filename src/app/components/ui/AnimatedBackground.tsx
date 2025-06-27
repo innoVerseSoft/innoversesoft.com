@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useMouseParallax } from '../hooks/useMouseParallax';
+import { useMouseParallax } from '../../hooks/useMouseParallax';
 
-export const AnimatedBackground = () => {
+export default function AnimatedBackground() {
   const mousePosition = useMouseParallax();
 
   const particles = Array.from({ length: 20 }, (_, i) => ({
@@ -91,4 +91,4 @@ export const AnimatedBackground = () => {
       />
     </div>
   );
-}; 
+}
