@@ -28,8 +28,8 @@ export default function Home() {
         <div className="bg-transparent">
           <HeroSection />
           <ServicesSection />
-          <AboutSection />
           <PortfolioSection />
+          <AboutSection />
           <TestimonialsSection />
           <CTASection />
           <Footer />

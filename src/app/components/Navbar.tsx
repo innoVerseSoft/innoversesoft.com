@@ -21,8 +21,8 @@ const navItems: NavItem[] = [
       { label: "AI & ML", href: "#services" }
     ]
   },
-  { label: "About", href: "#about" },
   { label: "Portfolio", href: "#portfolio" },
+  { label: "About", href: "#about" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" }
 ];
@@ -43,8 +43,8 @@ export default function Navbar() {
       setScrollProgress(scrollPercent);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    // window.addEventListener("scroll", handleScroll);
+    // return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (href: string) => {
