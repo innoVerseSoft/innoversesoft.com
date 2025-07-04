@@ -2,7 +2,7 @@ import { useEffect, useRef, FC } from "react";
 import { gsap } from "gsap";
 
 interface GridMotionProps {
-  items?: (string | React.ReactNode)[];
+  items?: string[];
   gradientColor?: string;
 }
 
@@ -23,8 +23,6 @@ const GridMotion: FC<GridMotionProps> = ({
     items.length > 0 ? items.slice(0, totalItems) : defaultItems;
 
   useEffect(() => {
-    mouseXRef.current = window.innerWidth / 2;
-    
     gsap.ticker.lagSmoothing(0);
 
     const handleMouseMove = (e: MouseEvent): void => {
@@ -89,7 +87,7 @@ const GridMotion: FC<GridMotionProps> = ({
                   <div key={itemIndex} className="relative">
                     <div className="relative w-full h-full overflow-hidden rounded-[10px] bg-[#111] flex items-center justify-center text-white text-[1.5rem]">
                       {typeof content === "string" &&
-                      content.startsWith("http") ? (
+                      (content.startsWith("http") || content.startsWith("/")) ? (
                         <div
                           className="w-full h-full bg-cover bg-center absolute top-0 left-0"
                           style={{ backgroundImage: `url(${content})` }}

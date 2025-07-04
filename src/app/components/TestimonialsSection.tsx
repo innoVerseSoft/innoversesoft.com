@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import { useState } from 'react';
 
@@ -34,26 +33,15 @@ export default function TestimonialsSection() {
   return (
     <section id="testimonials" className="py-20 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">What Our Clients Say</h2>
           <p className="text-xl text-slate-600">
             Don't just take our word for it - hear from the businesses we've helped transform.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           key={currentReview}
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
           className="bg-gradient-to-br from-gray-100 to-blue-50 rounded-3xl p-12 text-center shadow-lg"
         >
           <div className="flex justify-center mb-6">
@@ -75,14 +63,12 @@ export default function TestimonialsSection() {
               <div className="text-slate-600">{reviews[currentReview].role}</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         <div className="flex justify-center mt-8 space-x-2">
           {reviews.map((_, index) => (
-            <motion.button
+            <button
               key={index}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
               onClick={() => setCurrentReview(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentReview ? 'bg-indigo-500' : 'bg-gray-300'

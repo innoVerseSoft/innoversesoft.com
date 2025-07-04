@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import { useScroll, useTransform } from "framer-motion";
 import HeroSection from "./components/HeroSection";
 import ServicesSection from "./components/ServicesSection";
 import AboutSection from "./components/AboutSection";
@@ -14,12 +13,6 @@ import Aurora from "./components/ui/AuroraBG";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: containerRef,
-  //   offset: ["start start", "end end"],
-  // });
-
-  // const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   return (
     <>

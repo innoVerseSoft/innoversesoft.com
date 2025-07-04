@@ -55,10 +55,10 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
   (
     {
       texts,
-      transition = { type: "spring", damping: 25, stiffness: 300 },
+      transition = { type: "tween", duration: 0.3, ease: "easeOut" },
       initial = { y: "100%", opacity: 0 },
       animate = { y: 0, opacity: 1 },
-      exit = { y: "-120%", opacity: 0 },
+      exit = { y: "-100%", opacity: 0 },
       animatePresenceMode = "wait",
       animatePresenceInitial = false,
       rotationInterval = 2000,
@@ -237,9 +237,9 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
                   {wordObj.characters.map((char, charIndex) => (
                     <motion.span
                       key={charIndex}
-                      initial={initial as VariantLabels}
-                      animate={animate as VariantLabels}
-                      exit={exit as VariantLabels}
+                      initial={initial as any}
+                      animate={animate as any}
+                      exit={exit as any}
                       transition={{
                         ...transition,
                         delay: getStaggerDelay(

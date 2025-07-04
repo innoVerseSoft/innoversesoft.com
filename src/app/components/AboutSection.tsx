@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Award, Target, Users, Heart, Zap } from 'lucide-react';
 
 export default function AboutSection() {
@@ -8,12 +7,7 @@ export default function AboutSection() {
     <section id="about" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">About Innoverse</h2>
             <p className="text-xl text-slate-600 mb-8">
               We're a passionate team of innovators, designers, and developers dedicated to creating exceptional digital experiences that drive business growth and user engagement.
@@ -48,15 +42,9 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="bg-gradient-to-br from-indigo-500 to-blue-500 rounded-3xl p-8 text-white shadow-2xl">
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-lg mb-6">
@@ -72,7 +60,7 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

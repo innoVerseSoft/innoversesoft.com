@@ -12,8 +12,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Innoverse",
-  description: "Innoverse",
+  title: "Innoverse | Grow Your Business",
+  description: "Innoverse Software Solutions",
 };
 
 export default function RootLayout({
