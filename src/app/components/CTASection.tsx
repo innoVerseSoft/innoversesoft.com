@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CTASection() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-indigo-500 via-blue-500 to-emerald-500 relative overflow-hidden">
+    <section id="contact" className="py-20 px-4 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600">
       <div className="absolute inset-0">
         <svg className="w-full h-full" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>

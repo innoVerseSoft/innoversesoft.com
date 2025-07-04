@@ -31,7 +31,7 @@ export default function Home() {
           speed={1}
         />
       </div> */}
-      <div ref={containerRef} className="relative z-10 min-h-screen">
+      <div ref={containerRef} className="relative z-10 min-h-screen pt-16 lg:pt-20">
         <div className="bg-transparent">
           <HeroSection />
           <ServicesSection />

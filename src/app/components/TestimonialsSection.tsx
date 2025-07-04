@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
   const [currentReview, setCurrentReview] = useState(0);
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section id="testimonials" className="py-20 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

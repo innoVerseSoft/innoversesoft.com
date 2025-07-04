@@ -8,7 +8,7 @@ import RotatingText from "./ui/RotatingText";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 h-screen">
         {/* Left side - Content */}
         <div className="flex items-center justify-center px-4 relative z-10">

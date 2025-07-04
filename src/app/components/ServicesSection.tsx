@@ -12,7 +12,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-100">
+    <section id="services" className="py-20 px-4 bg-gradient-to-b from-white to-gray-100">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

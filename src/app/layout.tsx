@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 import { Manrope } from "next/font/google";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         className={`${manrope.variable} font-manrope antialiased`}
         style={{ fontFamily: manrope.style.fontFamily }}
       >
+        <Navbar />
         {children}
       </body>
     </html>
