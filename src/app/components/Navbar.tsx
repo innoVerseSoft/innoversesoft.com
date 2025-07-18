@@ -10,20 +10,12 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Home", href: "#home" },
-  { 
+  {
     label: "Services", 
-    href: "#services",
-    subItems: [
-      { label: "Web Development", href: "#services" },
-      { label: "Mobile Apps", href: "#services" },
-      { label: "Cloud Solutions", href: "#services" },
-      { label: "AI & ML", href: "#services" }
-    ]
+    href: "#services"
   },
   { label: "Portfolio", href: "#portfolio" },
   { label: "About", href: "#about" },
-  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" }
 ];
 
@@ -106,7 +98,7 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex flex-1 items-center justify-center space-x-8">
               {navItems.map((item, index) => (
                 <div key={item.label} className="relative group">
                   <button
@@ -117,9 +109,12 @@ export default function Navbar() {
                         scrollToSection(item.href);
                       }
                     }}
-                    className="flex items-center space-x-1 px-4 py-2 text-slate-700 hover:text-indigo-600 font-medium transform-gpu transition-all duration-200 rounded-lg hover:bg-white/20 hover:translate-y-[-2px]"
+                    className="flex items-center space-x-1 px-4 py-2 text-slate-700 hover:text-indigo-600 font-medium transform-gpu transition-all duration-200 rounded-lg hover:bg-white/20 hover:translate-y-[-2px] relative group"
                   >
-                    <span>{item.label}</span>
+                    <span className="relative">
+                      {item.label}
+                      <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-[#a800ed] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
+                    </span>
                     {item.subItems && (
                       <ChevronDown className="w-4 h-4 transform-gpu transition-transform duration-200 group-hover:rotate-180" />
                     )}

@@ -1,10 +1,8 @@
 "use client";
 
-import { ArrowRight, PhoneCall, Play, Sparkles } from "lucide-react";
+import { ArrowRight, PhoneCall } from "lucide-react";
 import MobileContainer from "./ui/MobileContainer";
-import GradientText from "./ui/GradientText";
 import RotatingText from "./ui/RotatingText";
-import Aurora from "./ui/AuroraBG";
 import GridMotionBg from "./ui/GridMotionBg";
 
 const mobileImages = [
@@ -69,8 +67,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-800 font-semibold mb-12 relative z-10 drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)] bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-              We craft digital experiences that inspire, innovate, and transform
-              businesses for the future.
+            We design, build, and launch full-stack platforms — from websites and mobile apps to backend systems — for companies ready to scale.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 items-start relative z-10">
@@ -80,7 +77,7 @@ export default function HeroSection() {
               </button>
               <button className="px-8 py-4 bg-white/90 border-2 border-purple-500 text-purple-700 rounded-full font-semibold text-lg flex items-center group hover:bg-white transition-all duration-300 shadow-xl">
                 <PhoneCall className="mr-2 group-hover:scale-110 transition-transform" />
-                Book a Call
+                Book a Meeting
               </button>
             </div>
           </div>
