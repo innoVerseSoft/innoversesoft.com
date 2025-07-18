@@ -14,7 +14,7 @@ export default function PortfolioSection() {
       title: "E-Commerce Platform", 
       category: "web", 
       description: "Modern React-based e-commerce solution",
-      image: "https://picsum.photos/seed/ecommerce/800/600",
+      image: "/img/our-work/phone-basket.jpg",
       tech: ["React", "Node.js", "MongoDB"]
     },
     { 
@@ -22,7 +22,7 @@ export default function PortfolioSection() {
       title: "Fitness App", 
       category: "mobile", 
       description: "Cross-platform mobile application",
-      image: "https://picsum.photos/seed/fitness/800/600",
+      image: "/img/our-work/various-screens-violet-public-transport-mobile-app_23-2148704862.avif",
       tech: ["React Native", "Firebase", "TypeScript"]
     },
     { 
@@ -30,7 +30,7 @@ export default function PortfolioSection() {
       title: "AI Analytics Dashboard", 
       category: "AI", 
       description: "Machine learning-powered insights",
-      image: "https://picsum.photos/seed/ai/800/600",
+      image: "/img/our-work/cloud2.jpg",
       tech: ["Python", "TensorFlow", "React"]
     },
     { 
@@ -38,7 +38,7 @@ export default function PortfolioSection() {
       title: "Corporate Website", 
       category: "web", 
       description: "Professional business platform",
-      image: "https://picsum.photos/seed/corporate/800/600",
+      image: "/img/our-work/imac.jpg",
       tech: ["Next.js", "Tailwind", "Framer Motion"]
     },
     { 
@@ -46,7 +46,7 @@ export default function PortfolioSection() {
       title: "Delivery App", 
       category: "mobile", 
       description: "Real-time logistics solution",
-      image: "https://picsum.photos/seed/delivery/800/600",
+      image: "/img/our-work/delivery.jpg",
       tech: ["Flutter", "Google Maps", "Firebase"]
     },
     { 
@@ -54,7 +54,7 @@ export default function PortfolioSection() {
       title: "Chatbot System", 
       category: "AI", 
       description: "Intelligent customer service automation",
-      image: "https://picsum.photos/seed/chatbot/800/600",
+      image: "/img/our-work/laptop-3.jpg",
       tech: ["OpenAI", "Node.js", "WebSocket"]
     }
   ];
