@@ -37,11 +37,11 @@ export default function FloatingButtons() {
         <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
       </button>
 
-      <button
+      {/* <button
         className="fixed bottom-6 left-6 z-50 w-14 h-14 bg-gradient-to-r from-emerald-500 to-green-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
       >
         <MessageCircle className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-      </button>
+      </button> */}
     </>
   );
 } 
