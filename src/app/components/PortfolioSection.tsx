@@ -28,7 +28,7 @@ export default function PortfolioSection() {
     { 
       id: 3, 
       title: "AI Analytics Dashboard", 
-      category: "ai", 
+      category: "AI", 
       description: "Machine learning-powered insights",
       image: "https://picsum.photos/seed/ai/800/600",
       tech: ["Python", "TensorFlow", "React"]
@@ -52,7 +52,7 @@ export default function PortfolioSection() {
     { 
       id: 6, 
       title: "Chatbot System", 
-      category: "ai", 
+      category: "AI", 
       description: "Intelligent customer service automation",
       image: "https://picsum.photos/seed/chatbot/800/600",
       tech: ["OpenAI", "Node.js", "WebSocket"]
@@ -108,7 +108,7 @@ export default function PortfolioSection() {
           className="flex justify-center mb-12"
         >
           <div className="flex flex-wrap gap-4">
-            {['all', 'web', 'mobile', 'ai'].map((filter) => (
+            {['all', 'web', 'mobile', 'AI'].map((filter) => (
               <motion.button
                 key={filter}
                 whileHover={{ scale: 1.05 }}

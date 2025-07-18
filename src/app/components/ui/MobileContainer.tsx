@@ -104,7 +104,6 @@ const MobileContainer: React.FC<MobileContainerProps> = ({ images, className = '
           </div>
 
           {/* Home Button */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gray-800 rounded-full border-2 border-gray-700"></div>
 
           {/* Camera */}
           <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-gray-800 rounded-full"></div>
