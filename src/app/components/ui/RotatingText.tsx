@@ -196,8 +196,24 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
 
     useEffect(() => {
       if (!auto) return;
-      const intervalId = setInterval(next, rotationInterval);
-      return () => clearInterval(intervalId);
+      let intervalId: NodeJS.Timeout | null = null;
+      function handleVisibilityChange() {
+        if (document.hidden) {
+          if (intervalId) clearInterval(intervalId);
+          console.log('[RotatingText] Text rotation paused (tab hidden)');
+        } else {
+          intervalId = setInterval(next, rotationInterval);
+          console.log('[RotatingText] Text rotation resumed (tab visible)');
+        }
+      }
+      if (!document.hidden) {
+        intervalId = setInterval(next, rotationInterval);
+      }
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+      return () => {
+        if (intervalId) clearInterval(intervalId);
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+      };
     }, [next, rotationInterval, auto]);
 
     return (

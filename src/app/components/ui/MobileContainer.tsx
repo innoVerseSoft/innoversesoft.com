@@ -39,12 +39,26 @@ const MobileContainer: React.FC<MobileContainerProps> = ({ images, className = '
     const nextIndex = (currentImageIndex + 1) % images.length;
     preloadNextImage(nextIndex);
 
-    timeoutRef.current = setInterval(transitionToNextImage, 5000);
+    function handleVisibilityChange() {
+      if (document.hidden) {
+        if (timeoutRef.current) clearInterval(timeoutRef.current);
+        console.log('[MobileContainer] Image transitions paused (tab hidden)');
+      } else {
+        timeoutRef.current = setInterval(transitionToNextImage, 5000);
+        console.log('[MobileContainer] Image transitions resumed (tab visible)');
+      }
+    }
+
+    if (!document.hidden) {
+      timeoutRef.current = setInterval(transitionToNextImage, 5000);
+    }
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
       if (timeoutRef.current) {
         clearInterval(timeoutRef.current);
       }
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, [currentImageIndex, images.length, preloadNextImage, transitionToNextImage]);
 

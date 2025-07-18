@@ -53,12 +53,26 @@ const GridMotion: FC<GridMotionProps> = ({
       });
     };
 
-    const removeAnimationLoop = gsap.ticker.add(updateMotion);
+    let removeAnimationLoop: (() => void) | null = null;
+    function handleVisibilityChange() {
+      if (document.hidden) {
+        if (removeAnimationLoop) removeAnimationLoop();
+        console.log('[GridMotion] Grid animation paused (tab hidden)');
+      } else {
+        removeAnimationLoop = gsap.ticker.add(updateMotion);
+        console.log('[GridMotion] Grid animation resumed (tab visible)');
+      }
+    }
+    if (!document.hidden) {
+      removeAnimationLoop = gsap.ticker.add(updateMotion);
+    }
     window.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      removeAnimationLoop();
+      if (removeAnimationLoop) removeAnimationLoop();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []);
 
