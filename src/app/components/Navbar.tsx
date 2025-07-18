@@ -11,12 +11,12 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    label: "Services", 
-    href: "#services"
+    label: "Services",
+    href: "#services",
   },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" }
+  { label: "About Us", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -28,9 +28,10 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
-      
+
       setIsScrolled(scrollTop > 50);
       setScrollProgress(scrollPercent);
     };
@@ -77,23 +78,25 @@ export default function Navbar() {
             {/* Logo */}
             <div className="flex items-center">
               <div className="flex items-center space-x-3">
-                <div 
-                  className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg transform-gpu transition-transform duration-300 hover:scale-110"
-                >
-                  <span className="text-white font-bold text-lg">I</span>
-                </div>
-                <span className="text-2xl font-light tracking-wider relative select-none">
-                  {/* Reduce number of layers and optimize blur */}
-                  <span className="absolute -inset-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 blur-[2px]">
-                    INNOVERSE
+                <a href="#">
+                  <span className="text-2xl font-light tracking-wider relative select-none">
+                    {/* Reduce number of layers and optimize blur */}
+                    <span className="absolute -inset-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 blur-[2px]">
+                      INNOVERSE
+                    </span>
+                    <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+                      INNOVERSE
+                    </span>
+                    <span
+                      className="absolute inset-0 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600"
+                      style={{
+                        WebkitTextStroke: "1px rgba(59, 130, 246, 0.3)",
+                      }}
+                    >
+                      INNOVERSE
+                    </span>
                   </span>
-                  <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
-                    INNOVERSE
-                  </span>
-                  <span className="absolute inset-0 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600" style={{ WebkitTextStroke: '1px rgba(59, 130, 246, 0.3)' }}>
-                    INNOVERSE
-                  </span>
-                </span>
+                </a>
               </div>
             </div>
 
@@ -132,9 +135,7 @@ export default function Navbar() {
                                 onClick={() => scrollToSection(subItem.href)}
                                 className="w-full text-left px-4 py-3 text-slate-700 hover:text-indigo-600 transform-gpu transition-all duration-200 flex items-center space-x-3 hover:bg-gray-50 hover:translate-x-1"
                               >
-                                <div 
-                                  className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transform-gpu transition-transform duration-200 hover:scale-125"
-                                />
+                                <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transform-gpu transition-transform duration-200 hover:scale-125" />
                                 <span>{subItem.label}</span>
                               </button>
                             ))}
@@ -187,10 +188,10 @@ export default function Navbar() {
                   >
                     <span>{item.label}</span>
                     {item.subItems && (
-                      <ChevronDown 
+                      <ChevronDown
                         className={`w-4 h-4 transition-transform duration-300 ${
                           activeDropdown === item.label ? "rotate-180" : ""
-                        }`} 
+                        }`}
                       />
                     )}
                   </button>
@@ -206,9 +207,7 @@ export default function Navbar() {
                               onClick={() => scrollToSection(subItem.href)}
                               className="w-full text-left flex items-center space-x-3 py-2 px-4 text-slate-600 hover:text-indigo-600 transition-all duration-300 rounded-lg hover:bg-white/30"
                             >
-                              <div 
-                                className="w-1.5 h-1.5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full transition-transform duration-300 hover:scale-150"
-                              />
+                              <div className="w-1.5 h-1.5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full transition-transform duration-300 hover:scale-150" />
                               <span>{subItem.label}</span>
                             </button>
                           ))}
@@ -234,4 +233,4 @@ export default function Navbar() {
       </nav>
     </>
   );
-} 
+}
