@@ -18,6 +18,12 @@ const mobileImages = [
 ]
 
 export default function HeroSection() {
+
+
+  const handleBookMeeting = () => {
+    window.open("https://calendly.com/ali-s-innoversesoft", "_blank");
+  }
+
   return (   
     <section id="home" className="relative flex items-center justify-center px-4 overflow-hidden ">
       {/* Full-screen glassy background effect */}
@@ -70,11 +76,13 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 items-start relative z-10">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-full font-semibold text-lg flex items-center group shadow-xl hover:shadow-2xl transition-all duration-300">
-                Start Your Project
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="px-8 py-4 bg-white/90 border-2 border-purple-500 text-purple-700 rounded-full font-semibold text-lg flex items-center group hover:bg-white transition-all duration-300 shadow-xl">
+              <a href="#contact">
+                <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-full font-semibold text-lg flex items-center group shadow-xl hover:shadow-2xl transition-all duration-300">
+                  Start Your Project
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </a>
+              <button onClick={handleBookMeeting} className="px-8 py-4 bg-white/90 border-2 border-purple-500 text-purple-700 rounded-full font-semibold text-lg flex items-center group hover:bg-white transition-all duration-300 shadow-xl">
                 <PhoneCall className="mr-2 group-hover:scale-110 transition-transform" />
                 Book a Meeting
               </button>
