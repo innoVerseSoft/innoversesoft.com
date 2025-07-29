@@ -34,7 +34,7 @@ export default function Footer() {
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-gray-400" />
                 <a href="mailto:lorian@innoversesoft.com" className="text-gray-300 hover:text-white transition-colors">
-                  lorian@innoversesoft.com
+                  lorian.k@innoversesoft.com
                 </a>
               </div>
             </div>
