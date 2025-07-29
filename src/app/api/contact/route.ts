@@ -5,11 +5,6 @@ export async function POST(request: NextRequest) {
   try {
     const { fullName, email, subject, description } = await request.json();
 
-    console.log("process.env.ZOHO_EMAIL", process.env.ZOHO_EMAIL);
-    console.log("process.env.ZOHO_APP_PASSWORD", process.env.ZOHO_APP_PASSWORD);
-    console.log("process.env.ZOHO_SMTP_HOST", process.env.ZOHO_SMTP_HOST);
-    console.log("process.env.ZOHO_SMTP_PORT", process.env.ZOHO_SMTP_PORT);
-
     const transporter = nodemailer.createTransport({
       host: process.env.ZOHO_SMTP_HOST!,
       port: Number(process.env.ZOHO_SMTP_PORT ?? 465),
