@@ -13,20 +13,6 @@ export default function TestimonialsSection() {
       text: "Innoverse transformed our digital presence completely. Their innovative approach and attention to detail exceeded all expectations.",
       rating: 5,
       avatar: "/img/mykg.svg"
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO, DataSync",
-      text: "The team at Innoverse delivered exceptional results. Their technical expertise and creative solutions helped us achieve our goals.",
-      rating: 5,
-      avatar: "https://picsum.photos/150/150?random=11"
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Founder, StartupXYZ",
-      text: "Working with Innoverse was a game-changer for our business. They truly understand how to create impactful digital experiences.",
-      rating: 5,
-      avatar: "https://picsum.photos/150/150?random=12"
     }
   ];
 
