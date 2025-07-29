@@ -63,8 +63,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Social Media */}
-          <div>
+
+          {/* <div>
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Follow Us</h3>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -78,6 +78,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
+           */}
         </div>
 
         {/* Navigation Links */}

@@ -77,7 +77,8 @@ export default function TestimonialsSection() {
           </AnimatePresence>
 
           {/* Navigation Buttons */}
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4">
+
+          {/* <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4">
             <button
               onClick={handlePrev}
               className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg hover:bg-gray-50 focus:outline-none transition-transform hover:scale-105 active:scale-95"
@@ -92,7 +93,9 @@ export default function TestimonialsSection() {
             >
               <ChevronRight className="w-6 h-6 text-gray-600" />
             </button>
-          </div>
+          </div> */}
+
+
         </div>
 
         {/* Dots Navigation */}
